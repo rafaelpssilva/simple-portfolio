@@ -251,7 +251,7 @@ function Technology() {
                     className={
                         cssSelect
                             ? "w-20 md:w-24 text-css3 animate-pulse ease-in-out duration-700"
-                            : "w-16 md:w-20"
+                            : "w-16 md:w-20 hover:text-css3 hover:animate-pulse"
                     }
                 >
                     <DiCss3 size={"100%"} />
