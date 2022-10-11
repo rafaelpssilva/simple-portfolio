@@ -32,6 +32,8 @@ function Technology() {
     const [nodejsSelect, setNodejsSelect] = useState(false);
     const [pythonSelect, setPythonSelect] = useState(false);
 
+    const [counter, setCounter] = useState(0);
+
     function eventClick(setTech) {
         if (
             (setTech === setHtmlSelect && htmlSelect) ||
@@ -58,11 +60,11 @@ function Technology() {
         {
             language: "My learnig",
             description: (
-                <div className="flex flex-col md:flex-row md:items-top md:gap-4">
-                    <p
-                        key="myLearnig"
-                        className="mb-6 text-sm md:w-1/2 md:text-lg md:text-justify"
-                    >
+                <div
+                    key="myLearnig"
+                    className="flex flex-col md:flex-row md:items-top md:gap-4"
+                >
+                    <p className="mb-6 text-sm md:w-1/2 md:text-lg md:text-justify">
                         Minha carreira de programador começa aos 16 anos
                         programadando em python pelo celular com curso de
                         Python3 do Gustavo Guanabara do{" "}
@@ -154,51 +156,111 @@ function Technology() {
         {
             language: "HTML 5",
             description: (
-                <p key="html5">
-                    HyperText Markup Language (HTML) is the most basic building
-                    block on the web. Defines the meaning and structure of web
-                    content. Technologies other than HTML are often used to
-                    describe the appearance/presentation (CSS) or
-                    functionality/behavior (JavaScript) of a web page.,
-                </p>
+                <div key="html5">
+                    <span>{"<html>"}</span> <br />
+                    <span className="ml-4">{"<head>"}</span> <br />
+                    <span className="ml-10">
+                        {"<title>"}Meu HTML{"</title>"}
+                    </span>{" "}
+                    <br />
+                    <span className="ml-4">{"</head>"}</span> <br />
+                    <span className="ml-4">{"<body>"}</span> <br />
+                    <span className="ml-10">
+                        {"<h1>"}Hello World{"</h1>"}
+                    </span>{" "}
+                    <br />
+                    <span className="ml-10">{"<p>"}</span> <br />
+                    <span className="ml-16 block">
+                        Foi com um simples código que eu vi minhas ideias sendo
+                        transcritas através de um navegador
+                    </span>
+                    <span className="ml-10">{"</p>"}</span> <br />
+                    <span className="ml-4">{"</body>"}</span> <br />
+                    <span>{"</html>"}</span>
+                </div>
             ),
         },
         {
             language: "CSS 3",
             description: (
-                <p key="css3">
-                    Cascading Style Sheets (CSS) is a style language (en-US)
-                    used to describe the presentation of a document written in
-                    HTML or XML (including several XML languages such as SVG,
-                    MathML, or XHTML). CSS describes how elements are shown on
-                    screen, paper, speech, or other media.
-                </p>
+                <div>
+                    <div class="border border-tertiaryColor shadow rounded-md p-4  mx-auto">
+                        <div class="animate-pulse flex space-x-4">
+                            <div class="rounded-full bg-slate-700 h-10 w-10"></div>
+                            <div class="flex-1 space-y-6 py-1">
+                                <div class="h-2 bg-slate-700 rounded"></div>
+                                <div class="space-y-3">
+                                    <div class="grid grid-cols-3 gap-4">
+                                        <div class="h-2 bg-slate-700 rounded col-span-2"></div>
+                                        <div class="h-2 bg-slate-700 rounded col-span-1"></div>
+                                    </div>
+                                    <div class="h-2 bg-slate-700 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p className="mt-2">
+                        Exemplo de css para carregamento de componentes
+                    </p>
+                </div>
             ),
         },
         {
             language: "JavaScript",
             description: (
-                <p key="javascript">
-                    JavaScript® (às vezes abreviado para JS) é uma linguagem
-                    leve, interpretada e baseada em objetos com funções de
-                    primeira classe, mais conhecida como a linguagem de script
-                    para páginas Web, mas usada também em vários outros
-                    ambientes sem browser, tais como node.js.
-                </p>
+                <div>
+                    <p key="javascript">
+                        JavaScript® (às vezes abreviado para JS) é uma linguagem
+                        leve, interpretada e baseada em objetos com funções de
+                        primeira classe, mais conhecida como a linguagem de
+                        script para páginas Web, mas usada também em vários
+                        outros ambientes sem browser, tais como node.js.
+                    </p>
+                    <button
+                        onClick={() => alert("Você clicou no botão")}
+                        className="mt-8 py-2 px-4 border border-neutral rounded-full mx-auto"
+                    >
+                        Clique Aqui
+                    </button>
+                </div>
             ),
         },
         {
             language: "React",
             description: (
-                <p key="react">
-                    According to its official slogan, React is a library for
-                    building user interfaces. React is not a framework – it's
-                    not even web-only. It is used with other libraries for
-                    rendering in certain environments. For example, React Native
-                    can be used for building mobile applications; React 360 can
-                    be used to build virtual reality applications; and many
-                    other possibilities.
-                </p>
+                <div>
+                    <p key="react">
+                        According to its official slogan, React is a library for
+                        building user interfaces. React is not a framework –
+                        it's not even web-only. It is used with other libraries
+                        for rendering in certain environments. For example,
+                        React Native can be used for building mobile
+                        applications; React 360 can be used to build virtual
+                        reality applications; and many other possibilities.
+                    </p>
+                    <div className="mt-8 w-full">
+                        <div className={`w-[${counter}%] bg-slate-100`}>
+                            {counter}
+                        </div>
+                        <div className="flex ">
+                            <button
+                                onClick={() => {
+                                    setCounter(counter + 10);
+                                    console.log(counter + "%");
+                                }}
+                                className=" py-2 px-4 border border-neutral rounded-full mx-auto hover:border-green-400"
+                            >
+                                Aumentar
+                            </button>
+                            <button
+                                onClick={() => setCounter(counter - 10)}
+                                className=" py-2 px-4 border border-neutral rounded-full mx-auto hover:border-red-400"
+                            >
+                                Diminuir
+                            </button>
+                        </div>
+                    </div>
+                </div>
             ),
         },
         {
