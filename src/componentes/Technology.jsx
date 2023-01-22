@@ -21,9 +21,10 @@ import CertficadoDiscovery1 from "../images/certificado-discovery1.jpg";
 import CertficadoDiscovery2 from "../images/certificado-discovery2.jpg";
 import FathfullTheBrand from "../images/faithfullthebrand.jpg";
 import RegisterApi from "../images/register-api.jpg";
+import FeaturedText from "./FeaturedText";
 
 function Technology() {
-  const [currentTechnology, setCurrentTechnology] = useState("My learnig");
+  const [currentTechnology, setCurrentTechnology] = useState("Desenvolvedor");
 
   const [htmlSelect, setHtmlSelect] = useState(false);
   const [cssSelect, setCssSelect] = useState(false);
@@ -57,42 +58,26 @@ function Technology() {
 
   const technologyDescription = [
     {
-      language: "My learnig",
+      language: "Desenvolvedor",
       description: (
         <div
-          key="myLearnig"
+          key="desenvolvedor-frontend"
           className="flex flex-col md:flex-row md:items-top md:gap-4"
         >
           <p className="mb-6 text-sm md:w-1/2 md:text-lg md:text-justify">
-            Minha carreira de programador começa aos 16 anos programadando em
-            python pelo celular com curso de Python3 do Gustavo Guanabara do{" "}
-            <a
-              href="#"
-              className="text-secondColor underline underline-offset-2 text-tertiaryColor "
-            >
-              Curso em Vídeo
-            </a>
-            . Ao longo dos estudos comecei a me interessar por front-end onde
-            realizei vários cursos por plataformas renomadas no segmento. Com
-            mais de 1 ano e 6 meses de experiência conto com projetos de ponta
-            utilizando{" "}
-            <a
-              href="#"
-              className="text-secondColor underline underline-offset-2 text-tertiaryColor "
-            >
-              React
-            </a>{" "}
-            e{" "}
-            <a
-              href="#"
-              className="text-secondColor underline underline-offset-2 text-tertiaryColor "
-            >
-              Tailwind CSS.
-            </a>
-            <br />
-            Nos slides abaixos você verá alguns certificados e projetos no qual
-            clicando neles te redicionará para o mesmo, e tambem clicando nos
-            ícones das tecnologias acima íra acontecer algo bem legal.
+            Eu Rafael agora com <FeaturedText>17 anos</FeaturedText> e meses
+            trabalhando com programação, possuo{" "}
+            <FeaturedText>"hard skills"</FeaturedText> em desenvolvimento
+            front-end com <FeaturedText>React</FeaturedText>, é uma boa
+            experiência em <FeaturedText>Node</FeaturedText>. Diversas vezes
+            criando projetos desde o <FeaturedText>UI/UX</FeaturedText>{" "}
+            prologando-se até o back-end.{" "}
+            <FeaturedText>Leitor de bons livros</FeaturedText> e tendo competido
+            em <FeaturedText>campeonatos de futebol</FeaturedText> me
+            desenvolveu grandes <FeaturedText>"soft skills"</FeaturedText>,
+            trabalho em grupo, liderança, humildade em reconhecer os erros e
+            organização. Atualmente o foco está em aprendizado de banco de
+            dados.
           </p>
           <Swiper
             spaceBetween={30}
@@ -267,8 +252,11 @@ function Technology() {
 
   return (
     <section id="technology" className="pt-[5vh] text-neutral">
-      <h2 className="mb-8 text-2xl text-secondColor font-bold select-none">
-        Technology
+      <h2
+        id="historia"
+        className="mb-8 text-2xl text-secondColor font-bold select-none"
+      >
+        História
       </h2>
       <ul className="flex justify-between md:w-4/5 mb-8">
         <li

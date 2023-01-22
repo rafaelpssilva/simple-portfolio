@@ -10,13 +10,13 @@ function Header() {
       <div className="">
         <ul className="flex text-sm gap-x-8 select-none">
           <li className="hover:text-tertiaryColor py-2 hover:border-b cursor-pointer ease-in duration-200">
-            HOME
+            <a href="#historia">HISTÓRIA</a>
           </li>
           <li className="hover:text-tertiaryColor py-2 hover:border-b cursor-pointer ease-in duration-300">
-            WORK
+            <a href="#experiencias">EXPERIÊNCIAS</a>
           </li>
           <li className="hover:text-tertiaryColor py-2 hover:border-b cursor-pointer ease-in duration-300">
-            ABOUT
+            <a href="#saibamais">SAIBA MAIS</a>
           </li>
         </ul>
       </div>

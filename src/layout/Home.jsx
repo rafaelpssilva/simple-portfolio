@@ -1,14 +1,12 @@
 import React from "react";
+import FeaturedText from "../componentes/FeaturedText";
 
 function Home() {
   return (
     <section className="h-[80vh] mb-[10vh] text-center flex items-center relative  select-none">
       <h1 className="tracking-tighter text-neutral text-4xl text-center w-full bg">
-        I’m a developer specialising in{" "}
-        <span className="font-bold text-secondColor">Front-End</span> and{" "}
-        <span className="font-bold text-secondColor">
-          Interaction Programing
-        </span>
+        Desenvolvedor <FeaturedText>Full Stack</FeaturedText> especializado em{" "}
+        <FeaturedText>Front-end</FeaturedText> com React
       </h1>
       <div className="absolute bottom-0 right-2/4 animate-bounce">
         <a href="#technology">

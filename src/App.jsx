@@ -9,6 +9,7 @@ import logo from "./images/logo.png";
 import Header from "./layout/Header";
 import Home from "./layout/Home";
 import SelectedProjects from "./layout/SelectedProjects";
+import Footer from "./layout/Footer";
 
 function App() {
   let vh = window.innerHeight * 0.01;
@@ -31,6 +32,7 @@ function App() {
         <Technology />
         <SelectedProjects />
         <About />
+        <Footer />
       </div>
     </div>
   );
