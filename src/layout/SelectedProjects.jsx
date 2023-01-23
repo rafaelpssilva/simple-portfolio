@@ -14,6 +14,7 @@ function SelectedProjects() {
       <div className="sm:hidden">
         <Project image={work1} layout="left" />
         <Project image={work1} layout="left" />
+        <Project image={work1} layout="left" />
       </div>
     </section>
   );
