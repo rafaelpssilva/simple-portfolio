@@ -11,8 +11,7 @@ function SelectedProjects() {
         Minhas <span className="text-secondColor font-bold">Experiências</span>
       </h2>
 
-      <div className="sm:hidden">
-        <Project image={work1} layout="left" />
+      <div className="">
         <Project image={work1} layout="left" />
         <Project image={work1} layout="left" />
       </div>
